@@ -12,6 +12,10 @@
   <body>
     <p>
       <a href="/users/new">Sign Up</a>
+      <%if @current_user%>
+        Hi <%=@current_user["first_name"]%>
+      <%else%>
+      <%end%>
     </p>
 
     <p>
