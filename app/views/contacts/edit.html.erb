@@ -1,0 +1,21 @@
+<h1>Edit Contact</h1>
+
+<%= form_with :model => @contact do |form| %>
+  <p>
+    <%= form.label "first_name" %>
+    <%= form.text_field "first_name" %>
+    <%= form.label "last_name" %>
+    <%= form.text_field "last_name" %>
+  </p>
+  <p>
+    <%= form.label "email" %>
+    <%= form.text_field "email" %>
+    <%= form.label "phone_number" %>
+    <%= form.text_field "phone_number" %>
+  </p>
+  <p>
+    <%= form.label "company_id" %>
+    <%= form.collection_select "company_id", Company.all, "id", "name" %>
+  </p>
+  <%= form.submit %>
+<% end %>
